@@ -22,7 +22,7 @@ namespace AT2_WFCadastros
             ListaCategorias.Add(this);
         }
 
-        public static List<Categorias> TodosOsUsuarios()
+        public static List<Categorias> TodasCategorias()
         {
             return ListaCategorias;
         }

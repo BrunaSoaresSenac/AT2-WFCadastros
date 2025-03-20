@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastrar));
-            maskedTextBox1 = new MaskedTextBox();
+            mtbCodigo = new MaskedTextBox();
             lblCodigo = new Label();
             lblCategoria = new Label();
             lblDescricao = new Label();
             lblStatus = new Label();
             lblDataCadastro = new Label();
             txtCategoria = new TextBox();
-            txtDescricao = new RichTextBox();
+            rtbDescricao = new RichTextBox();
             rdbAtivo = new RadioButton();
             rdbInativo = new RadioButton();
-            dateTimePicker1 = new DateTimePicker();
+            dtpDataCadastro = new DateTimePicker();
             btnCadastrar = new Button();
             SuspendLayout();
             // 
-            // maskedTextBox1
+            // mtbCodigo
             // 
-            maskedTextBox1.Location = new Point(12, 28);
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(70, 23);
-            maskedTextBox1.TabIndex = 0;
+            mtbCodigo.Enabled = false;
+            mtbCodigo.Location = new Point(12, 28);
+            mtbCodigo.Name = "mtbCodigo";
+            mtbCodigo.ReadOnly = true;
+            mtbCodigo.Size = new Size(70, 23);
+            mtbCodigo.TabIndex = 0;
             // 
             // lblCodigo
             // 
@@ -102,13 +104,13 @@
             txtCategoria.Size = new Size(143, 23);
             txtCategoria.TabIndex = 6;
             // 
-            // txtDescricao
+            // rtbDescricao
             // 
-            txtDescricao.Location = new Point(12, 93);
-            txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(260, 71);
-            txtDescricao.TabIndex = 7;
-            txtDescricao.Text = "";
+            rtbDescricao.Location = new Point(12, 93);
+            rtbDescricao.Name = "rtbDescricao";
+            rtbDescricao.Size = new Size(260, 71);
+            rtbDescricao.TabIndex = 7;
+            rtbDescricao.Text = "";
             // 
             // rdbAtivo
             // 
@@ -132,13 +134,13 @@
             rdbInativo.Text = "Inativo";
             rdbInativo.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dtpDataCadastro
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(169, 197);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(91, 23);
-            dateTimePicker1.TabIndex = 10;
+            dtpDataCadastro.Format = DateTimePickerFormat.Short;
+            dtpDataCadastro.Location = new Point(169, 197);
+            dtpDataCadastro.Name = "dtpDataCadastro";
+            dtpDataCadastro.Size = new Size(91, 23);
+            dtpDataCadastro.TabIndex = 10;
             // 
             // btnCadastrar
             // 
@@ -154,6 +156,7 @@
             btnCadastrar.TextAlign = ContentAlignment.MiddleRight;
             btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // FormCadastrar
             // 
@@ -162,17 +165,17 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(287, 280);
             Controls.Add(btnCadastrar);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpDataCadastro);
             Controls.Add(rdbInativo);
             Controls.Add(rdbAtivo);
-            Controls.Add(txtDescricao);
+            Controls.Add(rtbDescricao);
             Controls.Add(txtCategoria);
             Controls.Add(lblDataCadastro);
             Controls.Add(lblStatus);
             Controls.Add(lblDescricao);
             Controls.Add(lblCategoria);
             Controls.Add(lblCodigo);
-            Controls.Add(maskedTextBox1);
+            Controls.Add(mtbCodigo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -186,17 +189,17 @@
 
         #endregion
 
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox mtbCodigo;
         private Label lblCodigo;
         private Label lblCategoria;
         private Label lblDescricao;
         private Label lblStatus;
         private Label lblDataCadastro;
         private TextBox txtCategoria;
-        private RichTextBox txtDescricao;
+        private RichTextBox rtbDescricao;
         private RadioButton rdbAtivo;
         private RadioButton rdbInativo;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDataCadastro;
         private Button btnCadastrar;
     }
 }

@@ -16,9 +16,69 @@ namespace AT2_WFCadastros
         {
             InitializeComponent();
         }
+        public void Erro(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public void Atencao(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Atenção",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        public void Info(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Info",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void FormCadastrar_Load(object sender, EventArgs e)
         {
+            int qtdeProdutos = Categorias.TodasCategorias().Count;
+            int novoCodigo = qtdeProdutos + 1;
+            mtbCodigo.Text = novoCodigo.ToString("D4");
+            dtpDataCadastro.Value = DateTime.Today;
+        }
+        public bool CamposNaoPreenchidos()
+        {
+            if (string.IsNullOrEmpty(txtCategoria.Text))
+                return true;
+            if (string.IsNullOrEmpty(rtbDescricao.Text))
+                return true;
+            return false;
+        }
+        private void LimparCampos()
+        {
+            mtbCodigo.Clear();
+            txtCategoria.Clear();
+            rtbDescricao.Clear();
+            rdbAtivo.Checked = false;
+            rdbInativo.Checked = false;
+            dtpDataCadastro.Value = DateTime.Today;
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (CamposNaoPreenchidos() == true)
+            {
+                Erro("Os Campos Obrigatórios devem ser Preenchidos");
+                return;
+            }
+
+            Categorias cat = new Categorias();
+            cat.Codigo = int.Parse(mtbCodigo.Text);
+            cat.Categoria = txtCategoria.Text;
+            cat.Descricao = rtbDescricao.Text;
+            cat.DtCadastro = dtpDataCadastro.Value;
+
+            cat.Cadastrar();
+
+            Info("Cadastro Efetuado com Sucesso!");
+
+            LimparCampos();
+            int qtdeProdutos = Categorias.TodasCategorias().Count;
+            int novoCodigo = qtdeProdutos + 1;
+            mtbCodigo.Text = novoCodigo.ToString("D4");
 
         }
     }

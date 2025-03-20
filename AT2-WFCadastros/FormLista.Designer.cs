@@ -28,37 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvListaCategorias = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvListaCategorias).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListaCategorias
             // 
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaptionText;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(527, 163);
-            dataGridView1.TabIndex = 0;
+            dgvListaCategorias.BackgroundColor = SystemColors.ActiveCaptionText;
+            dgvListaCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListaCategorias.Location = new Point(0, 0);
+            dgvListaCategorias.Name = "dgvListaCategorias";
+            dgvListaCategorias.Size = new Size(547, 167);
+            dgvListaCategorias.TabIndex = 0;
             // 
             // FormLista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(527, 164);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(547, 168);
+            Controls.Add(dgvListaCategorias);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormLista";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Listagem de Categorias";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FormLista_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvListaCategorias).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvListaCategorias;
     }
 }

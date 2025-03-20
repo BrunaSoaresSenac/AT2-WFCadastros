@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AT2_WFCadastros
 {
-    public partial class FormLista: Form
+    public partial class FormLista : Form
     {
         public FormLista()
         {
             InitializeComponent();
+        }
+
+        private void FormLista_Load(object sender, EventArgs e)
+        {
+            dgvListaCategorias.DataSource = Categorias.TodasCategorias();
         }
     }
 }

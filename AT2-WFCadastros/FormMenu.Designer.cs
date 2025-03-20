@@ -3,12 +3,12 @@
     partial class FormMenu
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,69 +23,69 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             menuStrip1 = new MenuStrip();
-            cadastrarToolStripMenuItem = new ToolStripMenuItem();
-            listarToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
-            picImage = new PictureBox();
+            mnsCadastrar = new ToolStripMenuItem();
+            mnsListar = new ToolStripMenuItem();
+            mnsSair = new ToolStripMenuItem();
+            picMenu = new PictureBox();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMenu).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.ActiveCaption;
-            menuStrip1.ImeMode = ImeMode.NoControl;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, listarToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsListar, mnsSair });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(296, 24);
+            menuStrip1.Size = new Size(387, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
-            // cadastrarToolStripMenuItem
+            // mnsCadastrar
             // 
-            cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            cadastrarToolStripMenuItem.Size = new Size(69, 20);
-            cadastrarToolStripMenuItem.Text = "Cadastrar";
+            mnsCadastrar.Name = "mnsCadastrar";
+            mnsCadastrar.Size = new Size(69, 20);
+            mnsCadastrar.Text = "Cadastrar";
+            mnsCadastrar.Click += mnsCadastrar_Click;
             // 
-            // listarToolStripMenuItem
+            // mnsListar
             // 
-            listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            listarToolStripMenuItem.Size = new Size(47, 20);
-            listarToolStripMenuItem.Text = "Listar";
+            mnsListar.Name = "mnsListar";
+            mnsListar.Size = new Size(47, 20);
+            mnsListar.Text = "Listar";
+            mnsListar.Click += mnsListar_Click;
             // 
-            // sairToolStripMenuItem
+            // mnsSair
             // 
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(38, 20);
-            sairToolStripMenuItem.Text = "Sair";
+            mnsSair.Name = "mnsSair";
+            mnsSair.Size = new Size(38, 20);
+            mnsSair.Text = "Sair";
+            mnsSair.Click += mnsSair_Click;
             // 
-            // picImage
+            // picMenu
             // 
-            picImage.BorderStyle = BorderStyle.FixedSingle;
-            picImage.Dock = DockStyle.Fill;
-            picImage.Image = (Image)resources.GetObject("picImage.Image");
-            picImage.Location = new Point(0, 24);
-            picImage.Name = "picImage";
-            picImage.Size = new Size(296, 177);
-            picImage.SizeMode = PictureBoxSizeMode.StretchImage;
-            picImage.TabIndex = 1;
-            picImage.TabStop = false;
+            picMenu.Dock = DockStyle.Fill;
+            picMenu.Image = (Image)resources.GetObject("picMenu.Image");
+            picMenu.Location = new Point(0, 24);
+            picMenu.Name = "picMenu";
+            picMenu.Size = new Size(387, 244);
+            picMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            picMenu.TabIndex = 1;
+            picMenu.TabStop = false;
             // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(296, 201);
-            Controls.Add(picImage);
+            ClientSize = new Size(387, 268);
+            Controls.Add(picMenu);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
@@ -93,10 +93,10 @@
             MinimizeBox = false;
             Name = "FormMenu";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menu Principal";
+            Text = "FormMenu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -104,9 +104,9 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem cadastrarToolStripMenuItem;
-        private ToolStripMenuItem listarToolStripMenuItem;
-        private ToolStripMenuItem sairToolStripMenuItem;
-        private PictureBox picImage;
+        private ToolStripMenuItem mnsCadastrar;
+        private ToolStripMenuItem mnsListar;
+        private ToolStripMenuItem mnsSair;
+        private PictureBox picMenu;
     }
 }

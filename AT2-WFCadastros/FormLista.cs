@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AT2_WFCadastros
 {
-    public partial class FormCadastrar : Form
+    public partial class FormLista: Form
     {
-        public FormCadastrar()
+        public FormLista()
         {
             InitializeComponent();
-        }
-
-        private void FormCadastrar_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

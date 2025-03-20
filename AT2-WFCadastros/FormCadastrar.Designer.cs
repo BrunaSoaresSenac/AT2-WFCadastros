@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastrar));
             maskedTextBox1 = new MaskedTextBox();
             lblCodigo = new Label();
             lblCategoria = new Label();
@@ -79,7 +80,7 @@
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(31, 178);
+            lblStatus.Location = new Point(31, 182);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(42, 15);
             lblStatus.TabIndex = 4;
@@ -88,7 +89,7 @@
             // lblDataCadastro
             // 
             lblDataCadastro.AutoSize = true;
-            lblDataCadastro.Location = new Point(174, 178);
+            lblDataCadastro.Location = new Point(169, 179);
             lblDataCadastro.Name = "lblDataCadastro";
             lblDataCadastro.Size = new Size(84, 15);
             lblDataCadastro.TabIndex = 5;
@@ -112,7 +113,7 @@
             // rdbAtivo
             // 
             rdbAtivo.AutoSize = true;
-            rdbAtivo.Location = new Point(31, 196);
+            rdbAtivo.Location = new Point(31, 200);
             rdbAtivo.Name = "rdbAtivo";
             rdbAtivo.Size = new Size(53, 19);
             rdbAtivo.TabIndex = 8;
@@ -123,7 +124,7 @@
             // rdbInativo
             // 
             rdbInativo.AutoSize = true;
-            rdbInativo.Location = new Point(31, 221);
+            rdbInativo.Location = new Point(31, 225);
             rdbInativo.Name = "rdbInativo";
             rdbInativo.Size = new Size(61, 19);
             rdbInativo.TabIndex = 9;
@@ -134,25 +135,32 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(174, 196);
+            dateTimePicker1.Location = new Point(169, 197);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(91, 23);
             dateTimePicker1.TabIndex = 10;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(57, 249);
+            btnCadastrar.BackColor = SystemColors.MenuHighlight;
+            btnCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnCadastrar.ForeColor = SystemColors.ButtonHighlight;
+            btnCadastrar.Image = (Image)resources.GetObject("btnCadastrar.Image");
+            btnCadastrar.Location = new Point(148, 227);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(174, 23);
+            btnCadastrar.Size = new Size(124, 41);
             btnCadastrar.TabIndex = 11;
-            btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Text = "CADASTRAR";
+            btnCadastrar.TextAlign = ContentAlignment.MiddleRight;
+            btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // FormCadastrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(287, 285);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(287, 280);
             Controls.Add(btnCadastrar);
             Controls.Add(dateTimePicker1);
             Controls.Add(rdbInativo);
@@ -171,6 +179,7 @@
             Name = "FormCadastrar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu de Cadastro";
+            Load += FormCadastrar_Load;
             ResumeLayout(false);
             PerformLayout();
         }

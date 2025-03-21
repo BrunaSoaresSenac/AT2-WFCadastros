@@ -102,14 +102,14 @@
             txtCategoria.Location = new Point(129, 29);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(143, 23);
-            txtCategoria.TabIndex = 6;
+            txtCategoria.TabIndex = 1;
             // 
             // rtbDescricao
             // 
             rtbDescricao.Location = new Point(12, 93);
             rtbDescricao.Name = "rtbDescricao";
             rtbDescricao.Size = new Size(260, 71);
-            rtbDescricao.TabIndex = 7;
+            rtbDescricao.TabIndex = 2;
             rtbDescricao.Text = "";
             // 
             // rdbAtivo
@@ -118,7 +118,7 @@
             rdbAtivo.Location = new Point(31, 200);
             rdbAtivo.Name = "rdbAtivo";
             rdbAtivo.Size = new Size(53, 19);
-            rdbAtivo.TabIndex = 8;
+            rdbAtivo.TabIndex = 3;
             rdbAtivo.TabStop = true;
             rdbAtivo.Text = "Ativo";
             rdbAtivo.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             rdbInativo.Location = new Point(31, 225);
             rdbInativo.Name = "rdbInativo";
             rdbInativo.Size = new Size(61, 19);
-            rdbInativo.TabIndex = 9;
+            rdbInativo.TabIndex = 4;
             rdbInativo.TabStop = true;
             rdbInativo.Text = "Inativo";
             rdbInativo.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             dtpDataCadastro.Location = new Point(169, 197);
             dtpDataCadastro.Name = "dtpDataCadastro";
             dtpDataCadastro.Size = new Size(91, 23);
-            dtpDataCadastro.TabIndex = 10;
+            dtpDataCadastro.TabIndex = 5;
             // 
             // btnCadastrar
             // 
@@ -151,7 +151,7 @@
             btnCadastrar.Location = new Point(148, 227);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(124, 41);
-            btnCadastrar.TabIndex = 11;
+            btnCadastrar.TabIndex = 6;
             btnCadastrar.Text = "CADASTRAR";
             btnCadastrar.TextAlign = ContentAlignment.MiddleRight;
             btnCadastrar.TextImageRelation = TextImageRelation.ImageBeforeText;

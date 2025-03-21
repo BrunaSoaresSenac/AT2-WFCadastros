@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             txtLogin = new TextBox();
-            textBox1 = new TextBox();
+            txtSenha = new TextBox();
             btnAcessar = new Button();
             SuspendLayout();
             // 
@@ -43,14 +43,15 @@
             txtLogin.Size = new Size(135, 23);
             txtLogin.TabIndex = 0;
             // 
-            // textBox1
+            // txtSenha
             // 
-            textBox1.BackColor = SystemColors.ControlLightLight;
-            textBox1.Location = new Point(31, 92);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "SENHA";
-            textBox1.Size = new Size(135, 23);
-            textBox1.TabIndex = 1;
+            txtSenha.BackColor = SystemColors.ControlLightLight;
+            txtSenha.Location = new Point(31, 92);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.PlaceholderText = "SENHA";
+            txtSenha.Size = new Size(135, 23);
+            txtSenha.TabIndex = 1;
             // 
             // btnAcessar
             // 
@@ -61,6 +62,7 @@
             btnAcessar.TabIndex = 2;
             btnAcessar.Text = "Acessar";
             btnAcessar.UseVisualStyleBackColor = false;
+            btnAcessar.Click += btnAcessar_Click;
             // 
             // FormLogin
             // 
@@ -70,7 +72,7 @@
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(204, 189);
             Controls.Add(btnAcessar);
-            Controls.Add(textBox1);
+            Controls.Add(txtSenha);
             Controls.Add(txtLogin);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -79,6 +81,7 @@
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Acesso";
+            Load += FormLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,7 +89,7 @@
         #endregion
 
         private TextBox txtLogin;
-        private TextBox textBox1;
+        private TextBox txtSenha;
         private Button btnAcessar;
     }
 }

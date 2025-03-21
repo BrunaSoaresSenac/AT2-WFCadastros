@@ -34,8 +34,8 @@ namespace AT2_WFCadastros
 
         private void FormCadastrar_Load(object sender, EventArgs e)
         {
-            int qtdeProdutos = Categorias.TodasCategorias().Count;
-            int novoCodigo = qtdeProdutos + 1;
+            int qtdeCategorias = Categorias.TodasCategorias().Count;
+            int novoCodigo = qtdeCategorias + 1;
             mtbCodigo.Text = novoCodigo.ToString("D4");
             dtpDataCadastro.Value = DateTime.Today;
         }
@@ -70,14 +70,22 @@ namespace AT2_WFCadastros
             cat.Categoria = txtCategoria.Text;
             cat.Descricao = rtbDescricao.Text;
             cat.DtCadastro = dtpDataCadastro.Value;
+            if (rdbAtivo.Checked)
+            {
+                cat.Status = 'A';
+            }
+            else if (rdbInativo.Checked)
+            {
+                cat.Status = 'I';
+            }
 
             cat.Cadastrar();
 
             Info("Cadastro Efetuado com Sucesso!");
 
             LimparCampos();
-            int qtdeProdutos = Categorias.TodasCategorias().Count;
-            int novoCodigo = qtdeProdutos + 1;
+            int qtdeCategorias = Categorias.TodasCategorias().Count;
+            int novoCodigo = qtdeCategorias + 1;
             mtbCodigo.Text = novoCodigo.ToString("D4");
 
         }
